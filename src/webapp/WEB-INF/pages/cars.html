@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Car List</title>
+    <meta charset="UTF-8">
+    <title>Cars</title>
 </head>
 <body>
-<h1>Cars</h1>
-<ul>
-    <li th:each="car : ${cars}">
-        <span th:text="${car.brand + ' ' + car.model + ' (' + car.year + ')'}"></span>
-    </li>
-</ul>
+<h1>Cars List</h1>
+<table border="1" cellpadding="5" cellspacing="0" style="width: 80%; margin: 0 auto;">
+    <thead>
+    <tr>
+        <th>Brand</th>
+        <th>Model</th>
+        <th>Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="car : ${cars}">
+        <td th:text="${car.brand}"></td>
+        <td th:text="${car.model}"></td>
+        <td th:text="${car.year}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
