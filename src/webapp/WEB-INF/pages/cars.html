@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Car List</title>
+</head>
+<body>
+<h1>Cars</h1>
+<ul>
+    <li th:each="car : ${cars}">
+        <span th:text="${car.brand + ' ' + car.model + ' (' + car.year + ')'}"></span>
+    </li>
+</ul>
+</body>
+</html>
